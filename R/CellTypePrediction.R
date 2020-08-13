@@ -133,7 +133,7 @@ CLUSTERING <- function(Raw,blocks,method='MCL',K=NULL){
   RST
 }
 
-#' @useDynLib BRIC
+#' @useDynLib IRISCEM
 #' @export
 #' @name FindClassBasedOnMC
 ## final function

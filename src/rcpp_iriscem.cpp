@@ -22,7 +22,7 @@ extern "C" void my_function_to_handle_aborts(int signal_number) {
   // stop("abort()");
 }
 
-//' @backref src/rcpp_bric.cpp
+//' @backref src/rcpp_iriscem.cpp
 // [[Rcpp::export(.main)]]
 int qubic(const CharacterVector& str) {
   // may treat abort() more friendly, see http://stackoverflow.com/a/3911102
@@ -30,11 +30,11 @@ int qubic(const CharacterVector& str) {
   try {
     int argc = str.size();
     char **argv = new char*[str.size()];
-    
+
     for (int i = 0; i < argc; ++i) {
       argv[i] = strdup(as<std::string>(str[i]).c_str());
     }
-    
+
     int rtn = do_qubic(str.size(), argv);
     for (int i = 0; i < argc; ++i)
       free(argv[i]);

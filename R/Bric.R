@@ -5,6 +5,7 @@
 #'
 #' @importFrom Rcpp evalCpp
 
+
 qubic <- function(i = NULL, N = FALSE, R = FALSE, Fa = FALSE, d = FALSE, D = FALSE, C = FALSE, n = FALSE, q = 0.05, f = 0.85, k = 13, c = 0.90, o = 100) {
   vec <- c("./qubic", "-i", i)
   if(N) vec <- c(vec, "-N")
@@ -22,7 +23,7 @@ qubic <- function(i = NULL, N = FALSE, R = FALSE, Fa = FALSE, d = FALSE, D = FAL
 
   unloadNamespace("IRISCEM")
   ret <- .main(vec)
-  if(ret == 42) return(BRIC::qubic(paste0(i, ".chars"), d = TRUE))
+  if(ret == 42) return(IRISCEM::qubic(paste0(i, ".chars"), d = TRUE))
   # return (ret)
 }
 
