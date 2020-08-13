@@ -20,7 +20,7 @@ qubic <- function(i = NULL, N = FALSE, R = FALSE, Fa = FALSE, d = FALSE, D = FAL
   vec <- c(vec, "-c", as.character(c))
   vec <- c(vec, "-o", as.character(o))
 
-  unloadNamespace("BRIC")
+  unloadNamespace("IRISCEM")
   ret <- .main(vec)
   if(ret == 42) return(BRIC::qubic(paste0(i, ".chars"), d = TRUE))
   # return (ret)
@@ -28,7 +28,7 @@ qubic <- function(i = NULL, N = FALSE, R = FALSE, Fa = FALSE, d = FALSE, D = FAL
 
 
 .onUnload <- function (libpath) {
-  library.dynam.unload("BRIC", libpath)
+  library.dynam.unload("IRISCEM", libpath)
 }
 
 
