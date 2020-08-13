@@ -105,7 +105,7 @@ setMethod("RunDiscretization", "BRIC", .runDiscretization)
 #' This function will identify the Biclusters based on LTMG or Quantile normalization
 #' @param object
 #' @param DiscretizationModel use different discretization method, including "Quantile" and "LTMG."
-#' @param OpenDual the flag using the lower bound of condition number. Default: 5% of the gene number in current bicluster.
+#' @param OpenDual the flag using the lower bound of condition number. Default: 5 percent of the gene number in current bicluster.
 #' @param Extention consistency level of the block (0.5-1.0], the minimum ratio between the number of identical valid symbols in a column and the total number of rows in the output. Default: 1.0.
 #' @param NumBlockOutput number of blocks to report. Default: 100.
 #' @param BlockOverlap filtering overlapping blocks. Default: 0.7.

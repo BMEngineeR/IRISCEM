@@ -32,7 +32,7 @@ RunBicluster(object, ...)
 \arguments{
 \item{DiscretizationModel}{use different discretization method, including "Quantile" and "LTMG."}
 
-\item{OpenDual}{the flag using the lower bound of condition number. Default: 5% of the gene number in current bicluster.}
+\item{OpenDual}{the flag using the lower bound of condition number. Default: 5 percent of the gene number in current bicluster.}
 
 \item{NumBlockOutput}{number of blocks to report. Default: 100.}
 
